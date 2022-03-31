@@ -7,6 +7,7 @@ import About from './components/About/About';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
+import Footers from './components/Footers/Footers';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Route path='/inventory' element={<Inventory></Inventory>}></Route>
         <Route path='/about' element={<About></About>}></Route>
       </Routes>
-    
+      <Footers></Footers>
     </div>
   );
 }
