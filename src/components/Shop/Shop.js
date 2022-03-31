@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
 import './Shop.css';
+import { addToDb, getStoredCart } from '../../utilities/fakedb';
 
 const Shop = () => {
     const [products, setProduct] = useState([]);
@@ -12,10 +13,34 @@ const Shop = () => {
         fetch('products.json')
         .then(res => res.json())
         .then(data => setProduct(data))
-    }, [])
+    }, []);
+
+    useEffect(()=>{
+        const storedCart = getStoredCart();
+        const savedCart = [];
+        for (const id in storedCart) {
+            const addedProduct = products.find(product => product.id === id);
+            if(addedProduct){
+                const quantity = storedCart[id];
+                addedProduct.quantity = quantity;
+                savedCart.push(addedProduct);
+            }
+        }
+        setCart(savedCart);
+    }, [products])
+
     const handleAddToCart = (product) => {
-        const newCart = [...cart, product];
+        let newCart = [];
+        const exists = cart.find(productItem => productItem.id === product.id);
+       if(!exists) {
+            product.quantity = 1;
+            newCart = [...cart, product];
+        }else{
+            const rest = cart.filter(productItem => productItem.id === product.id)
+        }
+        
         setCart(newCart);
+        addToDb(product.id);
     }
     return (
         <div className='shop-container container-fluid mt-4'>
