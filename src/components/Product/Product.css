@@ -11,3 +11,9 @@
     font-weight: bold;
     color: 
 }
+
+@media screen and (max-width:420px) {
+    .product{
+        margin: auto;
+    }
+}

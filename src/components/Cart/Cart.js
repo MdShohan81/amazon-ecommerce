@@ -16,8 +16,8 @@ const Cart = (props) => {
     const total = subtotal + shipping + tax;
 
     return (
-        <div className='p-2 cart'>
-            <h3>Order Summary</h3>
+        <div className='pt-5 cart'>
+            <h3 className="mb-3"><span className="border-bottom border-danger border-3 ">Order Summary</span></h3>
             <h4>Select Item: {quantity}</h4>
             <p><b>SubTotal Price: ${subtotal}</b></p>
             <p><b> Shipping Fee: ${shipping}</b></p>

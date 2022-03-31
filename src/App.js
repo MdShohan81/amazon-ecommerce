@@ -11,7 +11,7 @@ import Footers from './components/Footers/Footers';
 
 function App() {
   return (
-    <div>
+    <div className='screenFeet'>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Shop></Shop>}></Route>
