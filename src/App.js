@@ -5,7 +5,6 @@ import Order from './components/Order/Order';
 import Inventory from './components/Inventory/Inventory';
 import About from './components/About/About';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
 import Footers from './components/Footers/Footers';
 
@@ -14,6 +13,7 @@ function App() {
     <div className='screenFeet'>
       <Header></Header>
       <Routes>
+        
         <Route path='/' element={<Shop></Shop>}></Route>
         <Route path='/shop' element={<Shop></Shop>}></Route>
         <Route path='/orders' element={<Order></Order>}></Route>
