@@ -1,0 +1,9 @@
+.order-container{
+    min-height: 100vh;
+}
+.product-order-container{
+    background-color:rgb(216, 189, 189);
+    height: 400px;
+    position: sticky;
+    top:0;
+}
