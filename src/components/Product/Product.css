@@ -11,6 +11,12 @@
     font-weight: bold;
     color: 
 }
+@media screen and (max-width:768px) {
+    .product {
+        width: 260px;
+        height: 540px;
+    }
+}
 
 @media screen and (max-width:420px) {
     .product{

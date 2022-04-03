@@ -54,7 +54,7 @@ const Shop = () => {
                        }
             </div>
             {/* cart container  */}
-            <div className="cart-container col-md-3">
+            <div className="cart-container col-md-3 pb-3">
                 <Cart cart={cart}>
                        
                             <button onClick={()=> navigate('/orders')} className='btn btn-success'>Review Order

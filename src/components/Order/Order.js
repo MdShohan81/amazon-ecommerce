@@ -35,7 +35,7 @@ const Order = () => {
                 <div className="product-order-container col-md-4 mt-5">
                     <Cart cart={cart}>
                         
-                            <button onClick={()=> navigate('/')} className='btn btn-success'>Proceed product <span className='ps-2 fs-'><FontAwesomeIcon icon={faArrowCircleRight}></FontAwesomeIcon></span> </button>
+                            <button onClick={()=> navigate('/')} className='btn btn-success'>Check Out <span className='ps-2 fs-'><FontAwesomeIcon icon={faArrowCircleRight}></FontAwesomeIcon></span> </button>
                         
                     </Cart>
                 </div>

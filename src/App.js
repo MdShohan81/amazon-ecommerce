@@ -13,7 +13,6 @@ function App() {
     <div className='screenFeet'>
       <Header></Header>
       <Routes>
-        
         <Route path='/' element={<Shop></Shop>}></Route>
         <Route path='/shop' element={<Shop></Shop>}></Route>
         <Route path='/orders' element={<Order></Order>}></Route>

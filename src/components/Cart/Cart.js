@@ -18,8 +18,8 @@ const Cart = (props) => {
     return (
         <div className='pt-5 cart'>
             <h3 className="mb-3"><span className="border-bottom border-danger border-3 ">Order Summary</span></h3>
-            <h4>Select Item: {quantity}</h4>
-            <p><b>SubTotal Price: ${subtotal}</b></p>
+            <h4>Item: {quantity}</h4>
+            <p><b>SubTotal: ${subtotal}</b></p>
             <p><b> Shipping Fee: ${shipping}</b></p>
             <p><b>Tax: ${tax}</b></p>
             <p><b>Total: ${total}</b></p>
