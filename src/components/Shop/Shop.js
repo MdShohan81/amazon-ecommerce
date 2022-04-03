@@ -5,10 +5,14 @@ import Cart from '../Cart/Cart';
 import './Shop.css';
 import { addToDb, getStoredCart } from '../../utilities/fakedb';
 import useProducts from '../../hooks/UseProducts';
+import {  useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 
 const Shop = () => {
     const [products, setProducts] = useProducts();
     const [cart, setCart] = useState([]);
+    const navigate = useNavigate();
 
    
 
@@ -51,7 +55,13 @@ const Shop = () => {
             </div>
             {/* cart container  */}
             <div className="cart-container col-md-3">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart}>
+                       
+                            <button onClick={()=> navigate('/orders')} className='btn btn-success'>Review Order
+                            <span className='ps-2 fs-'><FontAwesomeIcon icon={faArrowCircleRight}></FontAwesomeIcon></span>
+                            </button>
+                       
+                </Cart>
             </div>
             </div>
         </div>
