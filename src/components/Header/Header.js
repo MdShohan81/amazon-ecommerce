@@ -26,6 +26,9 @@ const Header = () => {
               <li className="nav-item">
               <Link className="nav-link hover-effect" to="/about">About</Link>
               </li>
+              <li className="nav-item">
+              <Link className="nav-link hover-effect" to="/login">Login</Link>
+              </li>
             </ul>
           </div>
         </div>

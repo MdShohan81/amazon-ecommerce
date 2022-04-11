@@ -1,0 +1,17 @@
+.or-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.or-section .left{
+    background-color: gray;
+    height: 2px;
+    width: 35%;
+}
+.or-section .right{
+    background-color: gray;
+    height: 2px;
+    width: 35%;
+}
