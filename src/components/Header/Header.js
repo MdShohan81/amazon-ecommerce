@@ -1,9 +1,16 @@
-import React from 'react';
+
 import './Header.css';
 import logo from '../../images/Logo.svg'
 import { Link } from 'react-router-dom';
+import auth from '../../firebase/firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
+  const [user] = useAuthState(auth);
+  const handleSignOut = () =>{
+    signOut(auth)
+  }
     return (
         <nav className="navbar navbar-expand-md navbar-dark bg-dark py-3">
         <div className="container">
@@ -27,7 +34,12 @@ const Header = () => {
               <Link className="nav-link hover-effect" to="/about">About</Link>
               </li>
               <li className="nav-item">
-              <Link className="nav-link hover-effect" to="/login">Login</Link>
+              {
+                user?
+                <button className="btn text-light" onClick={handleSignOut}>sign out</button>
+                :
+                <Link className="nav-link hover-effect" to="/login">Login</Link>
+              }
               </li>
             </ul>
           </div>
