@@ -12,7 +12,7 @@ const Header = () => {
     signOut(auth)
   }
     return (
-        <nav className="navbar navbar-expand-md navbar-dark bg-dark py-3">
+        <nav className="navbar navbar-expand-md navbar-dark bg-dark py-3  sticky-top" >
         <div className="container">
         <Link to="/"> <img src={logo} alt="brand" /></Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
